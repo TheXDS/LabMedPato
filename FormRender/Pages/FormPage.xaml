@@ -45,7 +45,7 @@
                 <Image
                     HorizontalAlignment="Left"
                     x:Name="imgHeader"
-                    Source="/FormRender;component/Assets/header.png"
+                    Source="/FormRender;component/Assets/header2.png"
                     DockPanel.Dock="top"/>
 
                 <!--Footer-->

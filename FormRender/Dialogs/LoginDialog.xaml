@@ -55,7 +55,7 @@
                             <Button.Template>
                                 <ControlTemplate TargetType="{x:Type ButtonBase}">
                                     <Grid Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
-                                        <mcart:BusyIndicator x:Name="bsyGo" Fill2="White" Radius="30" Visibility="Collapsed"/>
+                                        <mcart:BusyIndicator x:Name="bsyGo" Stroke="White" Radius="30" Visibility="Collapsed"/>
                                         <Grid x:Name="grdContent">
                                             <Ellipse x:Name="ellBG" Height="64" Width="64" Stroke="White" StrokeThickness="4" Fill="LightGray"/>
                                             <TextBlock x:Name="arrow" Text="➜" FontSize="40" Margin="3.5" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White"/>

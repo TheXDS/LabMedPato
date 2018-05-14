@@ -51,7 +51,7 @@
             </Viewbox>
             <Grid x:Name="busyMessage" Background="#70000000" >
                 <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <mcart:BusyIndicator Fill2="white" Margin="10"/>
+                    <mcart:BusyIndicator Stroke="white" Margin="10"/>
                     <TextBlock Text="Exportando documento..." VerticalAlignment="Center" Foreground="White" FontSize="18"/>
                 </WrapPanel>
             </Grid>

@@ -9,5 +9,5 @@ using TheXDS.MCART.Attributes;
 [assembly: AssemblyTrademark("Grupo Sinergia S.A. de C.V.")]
 [assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 [assembly: AssemblyVersion("1.13.*")]
-[assembly: MinMCARTVersion(0, 8, 0, 0)]
-[assembly: TargetMCARTVersion(0, 8, 0, 0)]
+[assembly: MinMCARTVersion(0, 8, 3, 0)]
+[assembly: TargetMCARTVersion(0, 8, 4, 1)]
