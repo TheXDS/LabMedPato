@@ -12,9 +12,7 @@
         <SolidColorBrush x:Key="CorpColor" Color="#FF2CCADA"/>
     </Window.Resources>
     <Grid>
-        <Grid>
-            <Image Source="/FormRender;component/Assets/ghost_icon.png" Opacity="0.4" Width="400" Height="400"/>
-        </Grid>
+
         <DockPanel>
             <Grid Width="60" Background="{StaticResource CorpColor}"/>
             <Grid>

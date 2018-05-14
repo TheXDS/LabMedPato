@@ -72,6 +72,8 @@ namespace FormRender.Utils
             File.WriteAllText(path, $"<html><p>{data.informe.Replace("<br/>", "</p><p>")}</p></html>");
             doc.Content.InsertFile(path, ConfirmConversions: false);
             doc.Content.Font.Name = "Calibri";
+            doc.Content.ParagraphFormat.LeftIndent = 28.34646f;
+            doc.Content.ParagraphFormat.RightIndent = 28.34646f;
             File.Delete(path);
 
             doc.Content.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphJustify;
@@ -92,7 +94,7 @@ namespace FormRender.Utils
 
             int lp = doc.Content.StoryLength - 1;
             Range endOfDoc = doc.Range(lp, lp);
-            Shape firmasBox = doc.Shapes.AddTextbox(MsoTextOrientation.msoTextOrientationHorizontal, 200, 661, 373, 50, endOfDoc);
+            Shape firmasBox = doc.Shapes.AddTextbox(MsoTextOrientation.msoTextOrientationHorizontal, 224, 650, 373, 50, endOfDoc);
             Table firmas = doc.Tables.Add(firmasBox.TextFrame.TextRange, 1, 2);
             firmasBox.Line.Visible = MsoTriState.msoFalse;
             firmasBox.RelativeVerticalPosition = WdRelativeVerticalPosition.wdRelativeVerticalPositionPage;

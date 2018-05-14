@@ -37,8 +37,8 @@ namespace FormRender
 #if DEBUG
             usr = "gbelot";
             pw = "Luna0102";
-            txtSerie.Text = "111";
-            txtfact.Text = "5130841";
+            txtSerie.Text = "12467";
+            txtfact.Text = "5129182";
 #endif
             try
             {
