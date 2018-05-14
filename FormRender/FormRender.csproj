@@ -114,6 +114,10 @@
     <Compile Include="Config.cs" />
     <Compile Include="Utils\PatoClient.cs" />
     <Compile Include="Utils\WordInterop.cs" />
+    <Page Include="Assets\footer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Dialogs\LoginDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
