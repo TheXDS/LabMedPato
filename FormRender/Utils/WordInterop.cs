@@ -61,10 +61,10 @@ namespace FormRender.Utils
             doc.Variables["Doctor"].Value = data.facturas.medico;
             doc.Variables["Edad"].Value = data.facturas.edad;
             doc.Variables["Factura"].Value = $"{data.factura_id.ToString() ?? "N/A"}";
-            doc.Variables["Fecha"].Value = $"{data.fecha_biopcia?.ToString("dd/MM/yyyy")}";
+            doc.Variables["Fecha"].Value = $"{data.fecha_informe?.ToString(language == Language.English ? "MMM dd, yyyy" : "dd/MM/yyyy")}";
             doc.Variables["Material"].Value = data.muestra;
             doc.Variables["Paciente"].Value = data.facturas.nombre_completo_cliente;
-            doc.Variables["Recibido"].Value = $"{data.fecha_muestra?.ToString("dd/MM/yyyy")}";
+            doc.Variables["Recibido"].Value = $"{data.fecha_muestra?.ToString(language == Language.English ? "MMM dd, yyyy" : "dd/MM/yyyy")}";
             doc.Variables["Sexo"].Value = data.facturas.sexo;
             UpdateFields(doc);
 
