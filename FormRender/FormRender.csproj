@@ -86,8 +86,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TheXDS.MCART.WPF, Version=0.8.4.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TheXDS.MCART.WPF.0.8.4.1\lib\net461\TheXDS.MCART.WPF.dll</HintPath>
+    <Reference Include="TheXDS.MCART.WPF, Version=0.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TheXDS.MCART.WPF.0.8.5\lib\net461\TheXDS.MCART.WPF.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

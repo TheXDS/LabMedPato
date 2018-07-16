@@ -27,7 +27,7 @@ namespace FormRender.Utils
             foreach (var f in new DirectoryInfo(Path.GetTempPath()).GetFiles("*.dotx"))
             {
                 try { f.Delete(); }
-                catch { }
+                catch {/* no hacer nada! */ }
             }
         }
         /// <summary>
@@ -51,6 +51,12 @@ namespace FormRender.Utils
             _templPath = await UnpackTemplate(language);
             return _wordApp.Documents.Add(ref _templPath);
         }
+
+        public static string LocalDate(DateTime? date, Language language)
+        {
+            return $"{date?.ToString(language == Language.English ? "MMM dd, yyyy" : "dd/MM/yyyy") ?? ""}";
+        }
+
         public async void Convert(InformeResponse data, IEnumerable<LabeledImage> imgs, Language language)
         {
             var doc = await OpenTemplate(language);
@@ -61,10 +67,10 @@ namespace FormRender.Utils
             doc.Variables["Doctor"].Value = data.facturas.medico;
             doc.Variables["Edad"].Value = data.facturas.edad;
             doc.Variables["Factura"].Value = $"{data.factura_id.ToString() ?? "N/A"}";
-            doc.Variables["Fecha"].Value = $"{data.fecha_biopcia?.ToString("dd/MM/yyyy")}";
+            doc.Variables["Fecha"].Value = LocalDate(data.fecha_informe,language);
             doc.Variables["Material"].Value = data.muestra;
             doc.Variables["Paciente"].Value = data.facturas.nombre_completo_cliente;
-            doc.Variables["Recibido"].Value = $"{data.fecha_muestra?.ToString("dd/MM/yyyy")}";
+            doc.Variables["Recibido"].Value = LocalDate(data.fecha_muestra, language);
             doc.Variables["Sexo"].Value = data.facturas.sexo;
             UpdateFields(doc);
 
